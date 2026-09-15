@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 title: 'Overview'
-description: 'Overview of transaction simulations on Starknet with Walnut'
+description: 'Overview of transaction simulations on Starknet with Starkloupe'
 hide_title: true
 ---
 
@@ -18,11 +18,11 @@ Simulations help test, debug, and verify transaction behavior. They catch securi
 -	**[Simulation](simulate-new)**: Create a brand-new transaction with custom parameters and preview the result without sending anything on-chain.
 -	**[Re-simulation](resimulate-existing)**: Replay an existing on-chain transaction, optionally tweak its parameters, and see how different outcomes might unfold.
 
-## Walnut Simulation Page
+## Starkloupe Simulation Page
 
-Walnut's Simulation page lets you configure a transaction simulation. Here's what each field does:
+Starkloupe's Simulation page lets you configure a transaction simulation. Here's what each field does:
 
-![Screenshot of the Simulation Form Page on Walnut](/img/simulation/simulation_page.png "Screenshot of the Simulation Form Page on Walnut")
+![Screenshot of the Simulation Form Page on Starkloupe](/img/simulation/simulation_page.png "Screenshot of the Simulation Form Page on Starkloupe")
 
 
 Form Breakdown:

@@ -6,10 +6,10 @@ import type * as Preset from '@docusaurus/preset-classic';
 require('dotenv').config();
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-const siteUrl = process.env.SITE_URL || 'https://docs.walnut.dev/';
+const siteUrl = process.env.SITE_URL || 'https://docs.starkloupe.co/';
 const config: Config = {
-  title: 'Walnut docs',
-  tagline: 'Walnut Documentation',
+  title: 'Starkloupe docs',
+  tagline: 'Starkloupe Documentation',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -23,21 +23,21 @@ const config: Config = {
       tagName: 'meta',
       attributes: {
         name: 'description',
-        content: 'Walnut is a transaction debugger and simulator for Starknet, EVM, and custom networks. Step through transactions at the source level, verify smart contracts, and simulate execution.',
+        content: 'Starkloupe is a transaction debugger and simulator for Starknet and custom networks. Step through transactions at the source level, verify smart contracts, and simulate execution.',
       },
     },
     {
       tagName: 'meta',
       attributes: {
         property: 'og:description',
-        content: 'Walnut is a transaction debugger and simulator for Starknet, EVM, and custom networks. Step through transactions at the source level, verify smart contracts, and simulate execution.',
+        content: 'Starkloupe is a transaction debugger and simulator for Starknet and custom networks. Step through transactions at the source level, verify smart contracts, and simulate execution.',
       },
     },
   ],
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  // organizationName: 'walnuthq', // Usually your GitHub org/user name.
-  // projectName: 'walnut-docs', // Usually your repo name.
+  // organizationName: 'software-mansion-labs', // Usually your GitHub org/user name.
+  // projectName: 'starkloupe-docs', // Usually your repo name.
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -72,12 +72,8 @@ const config: Config = {
         id: 'API',
         docsPluginId: 'api',
         config: {
-          walnut: {
-            specPath: 'https://evm.walnut.dev/api/openapi.json',
-            outputDir: 'api-docs/reference/evm-simulation',
-          },
-          walnutStarknet: {
-            specPath: 'openapi/walnut-starknet-simulation.json',
+          starkloupeStarknet: {
+            specPath: 'openapi/starkloupe-starknet-simulation.json',
             outputDir: 'api-docs/reference/starknet-simulation',
           },
         },
@@ -108,14 +104,14 @@ const config: Config = {
         tagName: 'meta',
         attributes: {
           name: 'description',
-          content: 'Walnut is a transaction debugger and simulator for Starknet, EVM, and custom networks. Step through transactions at the source level, verify smart contracts, and simulate execution.',
+          content: 'Starkloupe is a transaction debugger and simulator for Starknet. Step through transactions at the source level, verify smart contracts, and simulate execution.',
         },
       },
       {
         tagName: 'meta',
         attributes: {
           property: 'og:description',
-          content: 'Walnut is a transaction debugger and simulator for Starknet, EVM, and custom networks. Step through transactions at the source level, verify smart contracts, and simulate execution.',
+          content: 'Starkloupe is a transaction debugger and simulator for Starknet. Step through transactions at the source level, verify smart contracts, and simulate execution.',
         },
       },
       {
@@ -145,7 +141,7 @@ const config: Config = {
       },
       {
         property: 'og:image:alt',
-        content: 'Walnut logo',
+        content: 'Starkloupe logo',
       },
       {
         property: 'og:image:width',
@@ -158,9 +154,9 @@ const config: Config = {
     ],
     navbar: {
       logo: {
-        alt: 'Walnut logo',
-        src: 'img/logos/walnut.svg',
-        srcDark: 'img/logos/walnut_white.svg',
+        alt: 'Starkloupe logo',
+        src: 'img/logos/starkloupe.svg',
+        srcDark: 'img/logos/starkloupe_white.svg',
       },
       items: [
         {
@@ -178,7 +174,7 @@ const config: Config = {
           activeBasePath: '/api',
         },
         {
-          href: 'https://github.com/walnuthq',
+          href: 'https://github.com/software-mansion-labs',
           label: 'GitHub',
           position: 'right',
         },
@@ -193,25 +189,25 @@ const config: Config = {
             <div class='footer-content'>
               <div class='footer-love'>
                 Built with <span class='heart'>❤️</span> by
-                <a href='https://walnut.dev/' target='_blank' rel="noopener noreferrer">Walnut</a>
+                <a href='https://starkloupe.co/' target='_blank' rel="noopener noreferrer">Starkloupe</a>
               </div>
               <div class='footer-socials'>
-                <a href="https://github.com/walnuthq" 
-                   target='_blank' 
+                <a href="https://github.com/software-mansion-labs"
+                   target='_blank'
                    rel="noopener noreferrer"
                    aria-label="GitHub"
                    class='social-link'>
                   <img class="social-icon" src="/img/github-logo.svg" alt="GitHub"/>
                 </a>
-                <a href="https://t.me/walnuthq" 
-                   target='_blank' 
+                <a href="https://t.me/starkloupe"
+                   target='_blank'
                    rel="noopener noreferrer"
                    aria-label="Telegram"
                    class='social-link'>
                   <img class="social-icon" src="/img/telegram-logo.svg" alt="Telegram"/>
                 </a>
-                <a href="https://x.com/walnut_dev" 
-                   target='_blank' 
+                <a href="https://x.com/swmansionxyz"
+                   target='_blank'
                    rel="noopener noreferrer"
                    aria-label="Twitter"
                    class='social-link'>

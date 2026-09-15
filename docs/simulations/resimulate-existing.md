@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
 title: 'Re-simulate Existing Transactions'
-description: 'Re-simulate an existing transaction on Walnut'
+description: 'Re-simulate an existing transaction on Starkloupe'
 hide_title: true
 ---
 
@@ -11,7 +11,7 @@ Here's an example of how to re-simulate a transaction that failed from incorrect
 
 ## Step 1: Locate and Analyze the Failed Transaction
 
-Open [Walnut](http://app.walnut.dev) and use the search to find the transaction with hash: `0x04e9aaf268efe3fd9a328f5d40867231dfae14549126db8ed5471d3b3ed4da78`.
+Open [Starkloupe](https://app.starkloupe.co) and use the search to find the transaction with hash: `0x04e9aaf268efe3fd9a328f5d40867231dfae14549126db8ed5471d3b3ed4da78`.
 
 ![Analyze Transaction](/img/simulation/re-simulation_analyze.png "Analyze Transaction")
 <!-- <Screenshot src={ReSimulationAnalyze} alt="Analyze Transaction" /> -->
@@ -33,5 +33,5 @@ Click **"Run Simulation"** to execute the transaction with the updated calldata.
 
 With the updated calldata, the transaction succeeds. The argument `0x5` satisfies the `is_positive` requirement.
 
-You can view the results [here](https://app.walnut.dev/simulations?senderAddress=0x0565f25d19b517d45793b664084d02d5629cdda04e9a57ff44c36b2da157e65f&calldata=0x1%2C0x1d9afc66bb8bf890fd3395e85da7e7173236cb36eb4d33360bc21552d2865e5%2C0xad6422d28af18f3ff5089f6ba5268de9ba155aca3e2e38f5aec314fb140845%2C0x1%2C0x5&transactionVersion=1&blockNumber=395442&chainId=SN_SEPOLIA).
+You can view the results [here](https://app.starkloupe.co/simulations?senderAddress=0x0565f25d19b517d45793b664084d02d5629cdda04e9a57ff44c36b2da157e65f&calldata=0x1%2C0x1d9afc66bb8bf890fd3395e85da7e7173236cb36eb4d33360bc21552d2865e5%2C0xad6422d28af18f3ff5089f6ba5268de9ba155aca3e2e38f5aec314fb140845%2C0x1%2C0x5&transactionVersion=1&blockNumber=395442&chainId=SN_SEPOLIA).
 

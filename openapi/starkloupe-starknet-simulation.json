@@ -1,14 +1,14 @@
 {
   "openapi": "3.0.3",
   "info": {
-    "title": "Walnut Starknet Simulation API",
-    "description": "Simulate Starknet transactions from raw calldata, decoded calls, or an existing transaction hash. Every simulation returns a full execution trace and a deep link to open the result in the Walnut web app.",
+    "title": "Starkloupe Starknet Simulation API",
+    "description": "Simulate Starknet transactions from raw calldata, decoded calls, or an existing transaction hash. Every simulation returns a full execution trace and a deep link to open the result in the Starkloupe web app.",
     "version": "1.0.0"
   },
   "servers": [
     {
-      "url": "https://api.walnut.dev",
-      "description": "Walnut API"
+      "url": "https://api.starkloupe.co",
+      "description": "Starkloupe API"
     }
   ],
   "tags": [
@@ -124,7 +124,7 @@
         "operationId": "simulateTransactionByHash",
         "tags": ["Transaction simulation"],
         "summary": "Simulate by Hash",
-        "description": "Re-simulates an existing transaction by hash using Walnut's built-in RPC for the given chain.",
+        "description": "Re-simulates an existing transaction by hash using Starkloupe's built-in RPC for the given chain.",
         "parameters": [
           {
             "name": "chain_id",
@@ -373,8 +373,8 @@
           "walnut_webapp_url": {
             "type": "string",
             "nullable": true,
-            "description": "Deep link to open this simulation in the Walnut web app. Calldata-based simulations point to `https://app.walnut.dev/simulations?...`; tx-hash simulations point to `https://app.walnut.dev/transactions?chainId=...&txHash=...`.",
-            "example": "https://app.walnut.dev/simulations?chainId=SN_MAIN&senderAddress=0x04a4..."
+            "description": "Deep link to open this simulation in the Starkloupe web app. Calldata-based simulations point to `https://app.starkloupe.co/simulations?...`; tx-hash simulations point to `https://app.starkloupe.co/transactions?chainId=...&txHash=...`.",
+            "example": "https://app.starkloupe.co/simulations?chainId=SN_MAIN&senderAddress=0x04a4..."
           }
         }
       },
