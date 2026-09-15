@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 title: 'Verify Starknet Contracts'
-description: 'Upload your source code to Walnut to debug Starknet contracts step by step'
+description: 'Upload your source code to Starkloupe to debug Starknet contracts step by step'
 hide_title: true
 ---
 
@@ -16,15 +16,15 @@ Contract verification is available on **Mainnet**, **Sepolia**, and **custom net
 :::
 
 ## Verification Methods
-Walnut offers several ways to verify your contracts:
+Starkloupe offers several ways to verify your contracts:
 
 1. [sncast Verification](#sncast-verification): Use the [sncast](https://foundry-rs.github.io/starknet-foundry/starknet/sncast-overview.html) command-line tool to verify Foundry projects.
 2. [sozo Verification](#sozo-verification): Use the [sozo](https://book.dojoengine.org/toolchain/sozo) command-line tool to verify Dojo Worlds.
-3. [Walnut Verification API](#walnut-verification-api): Ideal for programmatic use cases.
+3. [Starkloupe Verification API](#starkloupe-verification-api): Ideal for programmatic use cases.
 
 ## sncast Verification
 
-Use `sncast verify` command to verify Foundry projects on Walnut.
+Use `sncast verify` command to verify Foundry projects on Starkloupe.
 
 To verify contracts deployed to Mainnet or Sepolia, follow these steps:
 
@@ -36,7 +36,7 @@ sncast \
     verify \
     --contract-address 0x01e4ebe3278ab4633a9d0d3f5c4290001f29bc3179a70e570b6817dd7f8264fa \
     --contract-name SimpleBalance \
-    --verifier walnut \
+    --verifier starkloupe \
     --network sepolia
 ```
 
@@ -47,7 +47,7 @@ sncast \
     verify \
     --class-hash 0x031966c9fe618bcee61d267750b9d46e3d71469e571e331f35f0ca26efe306dc \
     --contract-name SimpleBalance \
-    --verifier walnut \
+    --verifier starkloupe \
     --network sepolia
 ```
 
@@ -56,7 +56,7 @@ The `sncast verify` command accepts the following parameters:
 | Parameter | Required | Values | Description |
 |---|---|---|---|
 | `contract-name` | ✓ | string | Module name after `mod` in your contract source file |
-| `verifier` | ✓ | `walnut`, `voyager` | Verification provider |
+| `verifier` | ✓ | `starkloupe`, `voyager` | Verification provider |
 | `network` | ✓ | `mainnet`, `sepolia` | Network where the contract is deployed |
 | `contract-address` | ◐ | hex address | Mutually exclusive with `class-hash` |
 | `class-hash` | ◐ | hex hash | Mutually exclusive with `contract-address` |
@@ -69,7 +69,7 @@ The `sncast verify` command accepts the following parameters:
 If everything is correct, you'll see a prompt asking for confirmation:
 
 ```shell
-You are about to submit the entire workspace's code to the third-party chosen verifier at walnut, and the code will be publicly available through walnut's APIs. Are you sure? (Y/n):
+You are about to submit the entire workspace's code to the third-party chosen verifier at starkloupe, and the code will be publicly available through starkloupe's APIs. Are you sure? (Y/n):
 ```
 
 Press `Y` to submit and start verification.
@@ -79,18 +79,18 @@ Press `Y` to submit and start verification.
 ```shell
 
 command: verify
-message: "Contract verification has started. You can check the verification status at the following link: https://app.walnut.dev/verification/status/<uuid>"
+message: "Contract verification has started. You can check the verification status at the following link: https://app.starkloupe.co/verification/status/<uuid>"
 
 ```
 
 5. Well done! You've successfully submitted your verification request. Use the provided link to track the verification status.
-Once verification completes, you can debug transactions by interacting with your contracts on Walnut.
+Once verification completes, you can debug transactions by interacting with your contracts on Starkloupe.
 
 ## sozo Verification
 
-Use `sozo walnut verify` to verify Dojo contracts on Walnut. Make sure your project successfully builds with `sozo build` before verifying. For more details on building a Dojo project, see the [Dojo documentation](https://book.dojoengine.org/toolchain/sozo).
+Use `sozo walnut verify` to verify Dojo contracts on Starkloupe. Make sure your project successfully builds with `sozo build` before verifying. For more details on building a Dojo project, see the [Dojo documentation](https://book.dojoengine.org/toolchain/sozo).
 
-Follow these steps to verify your contracts on Walnut using `sozo`:
+Follow these steps to verify your contracts on Starkloupe using `sozo`:
 
 1. Navigate to your Dojo project and run:
 ```shell
@@ -99,22 +99,22 @@ sozo walnut verify
 
 ```
 
-2. If everything checks out, the verification process starts on Walnut. You'll see a notification with a status link like this:
+2. If everything checks out, the verification process starts on Starkloupe. You'll see a notification with a status link like this:
 
 ```shell
 🌰 Verifying classes with Walnut...
 
-  > "Contract verification has started. You can check the verification status at the following link: https://app.walnut.dev/verification/status/<uuid>"
+  > "Contract verification has started. You can check the verification status at the following link: https://app.starkloupe.co/verification/status/<uuid>"
 
 ```
 
 3. Monitor your verification status using the link above.
 
-## Walnut Verification API
+## Starkloupe Verification API
 
-You can also verify contracts through Walnut's API. This method currently supports two endpoints: one for Mainnet/Sepolia and one for custom networks.
+You can also verify contracts through Starkloupe's API. This method currently supports two endpoints: one for Mainnet/Sepolia and one for custom networks.
 
-The base API URL for Walnut is: https://api.walnut.dev
+The base API URL for Starkloupe is: https://api.starkloupe.co
 
 ### 1. Verify Contracts on Mainnet/Sepolia
 
@@ -151,20 +151,20 @@ The base API URL for Walnut is: https://api.walnut.dev
 
 - **Responses**:
 
-  - **200**: Contract verification started. Response body contains the string payload with a verification check status link (e.g. `"Contract verification has started. You can check the verification status at the following link: https://app.walnut.dev/verification/status/<uuid>"`).
+  - **200**: Contract verification started. Response body contains the string payload with a verification check status link (e.g. `"Contract verification has started. You can check the verification status at the following link: https://app.starkloupe.co/verification/status/<uuid>"`).
   - **400**: An error occurred during verification, such as a mismatch. Response error body payload contains the error message for diagnostics.
 
 ### 2. Verify Contracts on Custom Networks
 
-Verification works on custom networks that are compatible with Starknet JSON-RPC version ≥0.6.0. For custom networks, Walnut stores verified class data without a chain ID, so the same source can be reused across any network where the class shares the same source code.
+Verification works on custom networks that are compatible with Starknet JSON-RPC version ≥0.6.0. For custom networks, Starkloupe stores verified class data without a chain ID, so the same source can be reused across any network where the class shares the same source code.
 
-Custom network verification is available only through the Walnut Verification API.
+Custom network verification is available only through the Starkloupe Verification API.
 
 - **Endpoint**: `POST /v1/verify`
 
 - **Headers required**:
 
-  - `x-api-key`: Your Walnut API key. Contact us to get an API key: [https://t.me/walnuthq](https://t.me/walnuthq).
+  - `x-api-key`: Your Starkloupe API key. Contact us to get an API key: [https://t.me/starkloupe](https://t.me/starkloupe).
   - `application/json`
 
 - **Request body**:
@@ -202,5 +202,5 @@ Custom network verification is available only through the Walnut Verification AP
 
 **Possible Responses**:
 
-- **200**: Contract verification started. Response body contains the string payload with a verification check status link (e.g. `"Contract verification has started. You can check the verification status at the following link: https://app.walnut.dev/verification/status/<uuid>"`).
+- **200**: Contract verification started. Response body contains the string payload with a verification check status link (e.g. `"Contract verification has started. You can check the verification status at the following link: https://app.starkloupe.co/verification/status/<uuid>"`).
 - **400**: An error occurred during verification, such as a mismatch. Response error body payload contains the error message for diagnostics.
