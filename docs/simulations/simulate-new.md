@@ -1,13 +1,13 @@
 ---
 sidebar_position: 2
 title: 'Simulate New Transactions'
-description: 'Simulate a new transaction on Walnut'
+description: 'Simulate a new transaction on Starkloupe'
 hide_title: true
 ---
 
 # Simulate New Transactions
 
-Here's how to simulate a new transaction in Walnut.
+Here's how to simulate a new transaction in Starkloupe.
 
 Suppose we want to simulate a transaction calling `increase_balance` on this contract deployed on Sepolia:
 
@@ -21,7 +21,7 @@ The entrypoint we intend to call:
 
 ## Step 1: Navigate to the Simulation Page
 
-Go to [Walnut](https://app.walnut.dev) and click on **"Simulate Transaction"**.
+Go to [Starkloupe](https://app.starkloupe.co) and click on **"Simulate Transaction"**.
 
 ## Step 2: Fill in the Form Fields
 
