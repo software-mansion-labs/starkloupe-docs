@@ -1,6 +1,6 @@
-# Walnut documentation contents
+# Starkloupe documentation contents
 
-This repository contains material used to generate the [Walnut documentation](https://docs.walnut.dev/) website.
+This repository contains material used to generate the [Starkloupe documentation](https://docs.starkloupe.co/) website.
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 

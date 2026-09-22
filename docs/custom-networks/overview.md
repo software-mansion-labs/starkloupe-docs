@@ -1,19 +1,19 @@
 ---
 sidebar_position: 1
 title: 'Overview'
-description: 'Set up custom networks to debug and simulate on any RPC in Walnut'
+description: 'Set up custom networks to debug and simulate on any RPC in Starkloupe'
 hide_title: true
 ---
 
 # Overview
 
-Custom Networks let you use Walnut for debugging and simulations on any RPC, including custom appchains like [Slot deployments](https://github.com/cartridge-gg/slot).
+Custom Networks let you use Starkloupe for debugging and simulations on any RPC, including custom appchains like [Slot deployments](https://github.com/cartridge-gg/slot).
 
 ## Setup
 
-Add a custom network, then search and debug its transactions from Walnut.
+Add a custom network, then search and debug its transactions from Starkloupe.
 
-1. Go to [Walnut](https://app.walnut.dev), click on your account profile (top right) and select **"Settings"**.
+1. Go to [Starkloupe](https://app.starkloupe.co), click on your account profile (top right) and select **"Settings"**.
    On the Settings page select **"Custom networks"** in the left navigation pane. Type your network name and the RPC URL.
 
 ![Add custom network data](/img/custom_networks/add_custom_network_data.png "Add custom network data")
@@ -25,6 +25,6 @@ Add a custom network, then search and debug its transactions from Walnut.
 
 ## Search for Transactions on a Custom RPC
 
-Use the Walnut Search bar to find and debug transactions on your custom network.
+Use the Starkloupe Search bar to find and debug transactions on your custom network.
 
 ![DebugTx](/img/custom_networks/debug_tx.png "DebugTx")
